@@ -222,3 +222,29 @@ document.addEventListener("DOMContentLoaded", () => {
       generateFruitBorder(); /* Adjust Border */
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const gameContainer = document.querySelector(".game-container");
+  const fruitBorder = document.querySelector(".fruit-border");
+  
+  function adjustGameSize() {
+      let vw = window.innerWidth;
+      let vh = window.innerHeight;
+      let size = Math.min(vw * 0.9, vh * 0.8, 600);
+      gameContainer.style.width = `${size}px`;
+      gameContainer.style.height = `${size}px`;
+  }
+  
+  function adjustFruitBorder() {
+      fruitBorder.style.width = "100vw";
+      fruitBorder.style.height = "100vh";
+  }
+  
+  window.addEventListener("resize", () => {
+      adjustGameSize();
+      adjustFruitBorder();
+  });
+  
+  adjustGameSize();
+  adjustFruitBorder();
+});

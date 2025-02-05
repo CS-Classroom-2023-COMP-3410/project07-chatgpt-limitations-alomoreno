@@ -1,0 +1,1 @@
+I wasn't able to get the feature fully working and responsive. I first was able to have the border fully surrounded, but once I tried making the game board responsive by different sizes, the border was no longer functioning like before. I did implement a third-party library, bootstrap. 
